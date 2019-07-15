@@ -186,7 +186,7 @@ namespace EightPuzzleSolver
             _stopwatch.Stop();
 
             Console.WriteLine(
-                $"At depth= {node.Depth} with nodes= {_fringe.Count} in time {_stopwatch.ElapsedMilliseconds}");
+                $"At depth={node.Depth} with nodes={_fringe.Count} in {_stopwatch.ElapsedMilliseconds} milliseconds.");
 
             _done = true;
             PrintSolution(node);
@@ -259,7 +259,7 @@ namespace EightPuzzleSolver
                 Console.WriteLine("expanding node:");
 
                 PrintBoard(temp.State);
-                Console.WriteLine($"with F(N)={temp.Score}");
+                Console.WriteLine($"with F(N)= {temp.Score}");
 
                 Expand(temp);
             }
